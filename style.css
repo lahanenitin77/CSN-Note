@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+.container{
+    margin-top:40px;
+}
+
+.price{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.btn{
+    background:#6a0dad;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.btn2{
+    margin-top:10px;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+#payment{
+    margin-top:25px;
+}
+
+.watermark{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-30deg);
+    font-size:100px;
+    color:rgba(0,0,0,0.08);
+    pointer-events:none;
+}

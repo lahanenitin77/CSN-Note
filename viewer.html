@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSN Notes Viewer</title>
+<style>
+body{
+    margin:0;
+    background:#111;
+    text-align:center;
+}
+
+img{
+    width:90%;
+    max-width:900px;
+    margin:20px auto;
+    display:block;
+}
+
+.watermark{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-30deg);
+    font-size:120px;
+    color:rgba(255,255,255,0.08);
+    pointer-events:none;
+}
+</style>
+</head>
+<body>
+
+    <script>
+if(sessionStorage.getItem("access") !== "granted"){
+    window.location.href = "index.html";
+}
+</script>
+
+<div class="watermark">CSN</div>
+
+<img src="page2.jpg">
+<img src="page3.jpg">
+<img src="page4.jpg">
+<img src="page5.jpg">
+<img src="page6.jpg">
+<img src="page7.jpg">
+<img src="page8.jpg">
+<img src="page9.jpg">
+<img src="page10.jpg">
+<img src="page11.jpg">
+<img src="page12.jpg">
+<img src="page13.jpg">
+<img src="page14.jpg">
+<img src="page15.jpg">
+<img src="page16.jpg">
+<img src="page17.jpg">
+<img src="page18.jpg">
+<img src="page19.jpg">
+<img src="page20.jpg">
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", function(e){
+    if(
+        e.ctrlKey &&
+        (e.key === "s" || e.key === "p" || e.key === "u")
+    ){
+        e.preventDefault();
+    }
+});
+</script>
+<script>
+document.addEventListener("dragstart", e => e.preventDefault());
+
+document.querySelectorAll("img").forEach(img => {
+    img.setAttribute("draggable", "false");
+});
+</script>
+</body>
+</html>
